@@ -1,0 +1,2 @@
+lav et timer system med bpm, måske find en lettere måde at lave en map på
+måske noget der skrives i en txt som læses skaber et script

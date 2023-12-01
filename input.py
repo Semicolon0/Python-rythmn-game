@@ -1,6 +1,7 @@
 import pygame as pyg
 import ui
 import notes
+import test_map as tm
 
 # Initialize key state dictionary
 key_state = {pyg.K_q: False, pyg.K_w: False, pyg.K_e: False, pyg.K_r: False, pyg.K_t: False, pyg.K_y: False}
@@ -96,7 +97,8 @@ def handle_input_actions():
     if keys[pyg.K_q] and not key_state[pyg.K_q]:
         key_state[pyg.K_q] = True
         ui.color1 = (255, 119, 0)
-        note.note_hit(1, note.y_pos)
+        for note in tm.notes_list:
+            note.note_hit(1, note.y_pos, note)
         import main
         q_active = True
         q_time = main.game_time
@@ -109,7 +111,8 @@ def handle_input_actions():
     if keys[pyg.K_w] and not key_state[pyg.K_w]:
         key_state[pyg.K_w] = True
         ui.color2 = (77, 255, 0)
-        note.note_hit(2, note.y_pos)
+        for note in tm.notes_list:
+            note.note_hit(2, note.y_pos, note)
         import main
         w_active = True
         w_time = main.game_time
@@ -123,7 +126,8 @@ def handle_input_actions():
     if keys[pyg.K_e] and not key_state[pyg.K_e]:
         key_state[pyg.K_e] = True
         ui.color3 = (0, 0, 255)
-        note.note_hit(3, note.y_pos)
+        for note in tm.notes_list:
+            note.note_hit(3, note.y_pos, note)
         import main
         e_active = True
         e_time = main.game_time
@@ -138,7 +142,8 @@ def handle_input_actions():
     if keys[pyg.K_r] and not key_state[pyg.K_r]:
         key_state[pyg.K_r] = True
         ui.color4 = (255, 0, 255)
-        note.note_hit(4, note.y_pos)
+        for note in tm.notes_list:
+            note.note_hit(4, note.y_pos, note)
         import main
         r_active = True
         r_time = main.game_time
@@ -153,7 +158,8 @@ def handle_input_actions():
     if keys[pyg.K_t] and not key_state[pyg.K_t]:
         key_state[pyg.K_t] = True
         ui.color5 = (255, 0, 0)
-        note.note_hit(5, note.y_pos)
+        for note in tm.notes_list:
+            note.note_hit(5, note.y_pos, note)
         import main
         t_active = True
         t_time = main.game_time
@@ -168,7 +174,8 @@ def handle_input_actions():
     if keys[pyg.K_y] and not key_state[pyg.K_y]:
         key_state[pyg.K_y] = True
         ui.color6 = (0, 255, 246)
-        note.note_hit(6, note.y_pos)
+        for note in tm.notes_list:
+            note.note_hit(6, note.y_pos, note)
         import main
         y_active = True
         y_time = main.game_time

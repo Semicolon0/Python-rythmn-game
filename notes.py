@@ -36,13 +36,11 @@ class Note:
             self.x_pos = x / 6 * self.lane - x / 6
             self.y_pos += self.speed
             
-            if self.y_pos > 500:
-                self.draw = False
-
             pyg.draw.rect(screen, self.color, pyg.Rect(self.x_pos + 15, self.y_pos, x / 6 - 30, y / 6 / 2))
 
       
-    def note_hit(self,input_lane, y_pos):
+    def note_hit(self,input_lane, y_pos, note):
         import main
         if self.lane == input_lane and self.y_pos + main.y / 6 / 2 > main.y / 6 * 5:
-            self.draw = False
+            import test_map
+            test_map.notes_list.remove(note)
